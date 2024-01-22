@@ -1,40 +1,45 @@
-
-
-
 /* HEADER */
 
-header{
+/* Estilos generales del encabezado */
+header {
     height: 75%;
     background-image: url(../img/hero.jpg);
     background-position: center;
     background-size: cover;
-    
+    background-repeat: no-repeat;
 }
 
-.header-container{
+/* Estilos específicos del contenedor del encabezado */
+.header-container {
+    background: rgb(0 0 0 / 40%);
+
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
     height: 100%;
 }
 
-.container{
+/* Estilos generales del contenedor principal */
+.container {
     max-width: 100vw;
     padding: 1.5rem 5%;
-
 }
-#language{
-    background-color: black;
+
+/* Estilos del idioma y su contenedor */
+#language {
+    background-color: var(--black);
     color: var(--white);
     border: none;
 }
 
-.language-container{
-    background-color: black;
+.language-container {
+    width: 140px;
+    background-color: var(--black);
     border: var(--white) 1px solid;
     border-radius: 5px;
     padding: 0.25rem 1rem;
 }
 
-.hero{
+/* Estilos del héroe (sección destacada) */
+.hero {
     text-align: center;
     margin-top: 10rem;
     margin-bottom: 6rem;
@@ -45,14 +50,16 @@ header{
     gap: 1rem;
 }
 
-.button{
+/* Estilos del botón y el input */
+.button {
     background-color: var(--red);
     color: var(--white);
     border: none;
     border-radius: 5px;
     padding: 0.25rem 1rem;
 }
-input{
+
+input {
     width: 250px;
     border: var(--white) 2px solid;
     color: var(--white);
@@ -60,6 +67,15 @@ input{
     padding: 0.25rem 1rem;
 }
 
+input:not(:placeholder-shown):invalid {
+    border: 2px solid red;
+}
+
+input:not(:placeholder-shown):valid {
+    border: 2px solid green;
+}
+
+/* Estilos específicos del formulario */
 .button-form {
     width: 150px;
     height: 60px;
@@ -69,98 +85,113 @@ input{
     border-radius: 5px;
 }
 
-.banner{
+/* Estilos del banner */
+.banner {
     display: flex;
     width: 100%;
     margin-top: -100px;
     padding: 22px;
-    background: radial-gradient( 51.39% 511.66% at 47.68% -217.91%, #ff9900 0%, #e50914 17.27%, #0e1b4f 79.44%, #000413 100% );    
+    background: radial-gradient(51.39% 511.66% at 47.68% -217.91%, #ff9900 0%, #e50914 17.27%, #0e1b4f 79.44%, #000413 100%);
 }
-.banner-lista{
+
+/* Estilos de la lista dentro del banner */
+.banner-lista {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
+/* Estilos de la imagen dentro del banner */
 .banner-img {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.banner-img img{
+.banner-img img {
     width: 128px;
     height: 100%;
     object-fit: cover;
 }
 
+/* Estilos de la sección de texto y la sección de imagen */
+.section-text {
+    width: 40%;
+    margin-left: 2rem;
+    height: 55vh;
+}
 
-hr{
+.section-img {
+    width: 50%;
+}
+
+/* Estilos de la línea horizontal */
+hr {
     border: 1px solid var(--white);
     background-color: var(--white);
     width: 100%;
     height: 8px;
 }
 
+/* Estilos del contenedor de preguntas */
+.container-preguntas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Estilos del acordeón */
+#accordion {
+    width: 70%;
+}
+
+/* Estilos del formulario */
+form {
+    width: 50%;
+}
 
 /* FOOTER */
 
+/* Estilos del enlace en el pie de página */
 footer a:hover {
     color: inherit;
 }
 
-
-/*color real footer es el #757575 pero ya que hay que aplciar bootstrap, mantenemos text-muted que es parecido*/
+/* Estilos generales del pie de página */
 footer {
     margin: 0 auto;
     max-width: 85%;
 }
 
 
-.dropdown-menu {
-    background-color: transparent;
-    border: 1px solid #222;
-    text-align: center;
-}
-
-.dropdown-item {
-    color: #fff;
-}
-
-.dropdown-item:hover {
-    color: #fff;
-    background-color: #1E90FF;
-}
-
-.globe {
-    padding-right: 0.9em;
-    font-size: 1.2rem; 
-}
-
-
-
+/* Estilos de la tarjeta */
 .card {
+    width: 100%;
     margin-bottom: 0.5rem;
     text-align: left;
     background: #303030;
     color: #fff;
 }
 
+/* Estilos del encabezado de la tarjeta */
 .card-header p {
     color: #fff;
     text-align: left;
 }
 
+/* Estilos del botón dentro de la tarjeta */
 .card button {
     overflow: visible;
     width: 100%;
-    /*para que coja el click a lo largo*/
     font-size: 1.5rem;
     text-align: left;
 }
 
-/*anulando bootstrap*/
+/* Anulando estilos de Bootstrap para ciertos elementos */
 .btn-link {
     font-weight: 400;
     color: inherit;
@@ -169,28 +200,11 @@ footer {
 }
 
 .btn-link:hover {
-    color: inherit;
+    color: var(--red);
     text-decoration: none;
-    border: none;
 }
 
-.btn-link.focus,
-.btn-link:focus {
-    text-decoration: none
-}
-
-.btn-link.disabled,
-.btn-link:disabled {
-    color: inherit;
-    pointer-events: none;
-    border: none
-}
-
-.btn.focus,
-.btn:focus {
-    box-shadow: 0 0 0 0.2rem transparent;
-}
-
+/* Estilos responsivos para dispositivos con ancho máximo de 568px */
 @media (max-width: 568px) {
     .banner {
         margin-top: 0;
@@ -200,28 +214,55 @@ footer {
     }
 }
 
+/* Estilos responsivos para dispositivos con ancho máximo de 768px */
 @media (max-width: 768px) {
+
+    /* Estilos del formulario para dispositivos pequeños */
+    form {
+        width: 100%;
+    }
+
+    /* Ajustes en la sección del héroe */
     .hero {
         margin-top: 0;
         gap: 0;
     }
 
+    /* Ajustes en la sección de texto */
+    .section-text {
+        width: 100%;
+        height: 30vh;
+    }
+
+    /* Ajustes en la sección de imagen */
+    .section-img {
+        width: 100%;
+    }
+
+    /* Ajustes en el banner para dispositivos pequeños */
     .banner {
         width: 100%;
         flex-direction: column;
-        background: radial-gradient( 120.35% 220% at 49.86% -6.29%, #e50914 0%, #0e1b4f 46.15%, #0d1121 100% );
+        background: radial-gradient(120.35% 220% at 49.86% -6.29%, #e50914 0%, #0e1b4f 46.15%, #0d1121 100%);
         margin-top: -32px;
         margin: -15px ;
         border-radius: 5px;
-
     }
+
+    /* Ajustes en la imagen dentro del banner para dispositivos pequeños */
     .banner-img {
         width: 100%;
         margin-top: -70px;
         margin-left: -50%;
     }
 
-    svg{
+    /* Ajustes en el tamaño del SVG para dispositivos pequeños */
+    svg {
         scale: 0.8;
+    }
+
+    /* Ajustes en el acordeón para dispositivos pequeños */
+    #accordion {
+        width: 100%;
     }
 }
