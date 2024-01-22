@@ -1,0 +1,227 @@
+
+
+
+/* HEADER */
+
+header{
+    height: 75%;
+    background-image: url(../img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.header-container{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+    height: 100%;
+}
+
+.container{
+    max-width: 100vw;
+    padding: 1.5rem 5%;
+
+}
+#language{
+    background-color: black;
+    color: var(--white);
+    border: none;
+}
+
+.language-container{
+    background-color: black;
+    border: var(--white) 1px solid;
+    border-radius: 5px;
+    padding: 0.25rem 1rem;
+}
+
+.hero{
+    text-align: center;
+    margin-top: 10rem;
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button{
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 0.25rem 1rem;
+}
+input{
+    width: 250px;
+    border: var(--white) 2px solid;
+    color: var(--white);
+    border-radius: 5px;
+    padding: 0.25rem 1rem;
+}
+
+.button-form {
+    width: 150px;
+    height: 60px;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+}
+
+.banner{
+    display: flex;
+    width: 100%;
+    margin-top: -100px;
+    padding: 22px;
+    background: radial-gradient( 51.39% 511.66% at 47.68% -217.91%, #ff9900 0%, #e50914 17.27%, #0e1b4f 79.44%, #000413 100% );    
+}
+.banner-lista{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.banner-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-img img{
+    width: 128px;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+hr{
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    width: 100%;
+    height: 8px;
+}
+
+
+/* FOOTER */
+
+footer a:hover {
+    color: inherit;
+}
+
+
+/*color real footer es el #757575 pero ya que hay que aplciar bootstrap, mantenemos text-muted que es parecido*/
+footer {
+    margin: 0 auto;
+    max-width: 85%;
+}
+
+
+.dropdown-menu {
+    background-color: transparent;
+    border: 1px solid #222;
+    text-align: center;
+}
+
+.dropdown-item {
+    color: #fff;
+}
+
+.dropdown-item:hover {
+    color: #fff;
+    background-color: #1E90FF;
+}
+
+.globe {
+    padding-right: 0.9em;
+    font-size: 1.2rem; 
+}
+
+
+
+.card {
+    margin-bottom: 0.5rem;
+    text-align: left;
+    background: #303030;
+    color: #fff;
+}
+
+.card-header p {
+    color: #fff;
+    text-align: left;
+}
+
+.card button {
+    overflow: visible;
+    width: 100%;
+    /*para que coja el click a lo largo*/
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+/*anulando bootstrap*/
+.btn-link {
+    font-weight: 400;
+    color: inherit;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-link:hover {
+    color: inherit;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-link.focus,
+.btn-link:focus {
+    text-decoration: none
+}
+
+.btn-link.disabled,
+.btn-link:disabled {
+    color: inherit;
+    pointer-events: none;
+    border: none
+}
+
+.btn.focus,
+.btn:focus {
+    box-shadow: 0 0 0 0.2rem transparent;
+}
+
+@media (max-width: 568px) {
+    .banner {
+        margin-top: 0;
+    }
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 0;
+        gap: 0;
+    }
+
+    .banner {
+        width: 100%;
+        flex-direction: column;
+        background: radial-gradient( 120.35% 220% at 49.86% -6.29%, #e50914 0%, #0e1b4f 46.15%, #0d1121 100% );
+        margin-top: -32px;
+        margin: -15px ;
+        border-radius: 5px;
+
+    }
+    .banner-img {
+        width: 100%;
+        margin-top: -70px;
+        margin-left: -50%;
+    }
+
+    svg{
+        scale: 0.8;
+    }
+}
